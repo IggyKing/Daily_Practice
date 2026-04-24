@@ -78,3 +78,53 @@ for c in s:
         res += letters[index]
         index += 1
 print(res)
+
+#任务2：回文判断
+#s = "aba"
+
+#i = 0
+
+#for c in s:
+#    if s[i] == s[n - i - 1]:
+#        print(True)
+#    else:
+#        print(False)
+
+#任务2：回文判断（正确版）
+s = "aba"
+
+n = len(s)
+
+flag = True
+
+for i in range(n//2):
+    if s[i] != s[n - i - 1]:
+        flag = False
+        break
+
+print(flag)
+
+#任务2：回文判断（自己写）
+s = "aba"
+
+flag = True
+
+for i in range(n//2):
+    if s[i] != s[n - i - 1]:
+        flag = False
+        break
+
+print(flag)
+
+#任务3：字符统计
+s = "aabbbc"
+
+d = {}
+
+for c in s:
+    if c in d:
+        d[c] += 1
+    else:
+        d[c] = 1
+
+print(d)
